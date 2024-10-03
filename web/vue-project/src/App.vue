@@ -16,11 +16,7 @@ const addNovaPregunta = async () => {
   preguntas.value = await getPreguntas();
 };
 
-const formulariCrear = () => {
-  if(){
 
-  }
-};
 
 // const getPython = async () => {
 //   preguntas.value = await getPreguntas();
