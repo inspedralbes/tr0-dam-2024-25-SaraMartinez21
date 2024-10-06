@@ -17,7 +17,7 @@
             "correcta": false
           }
         ],
-        "imatge": "./img/resacon.jpeg"
+        "imatge": "./back/img/resacon.jpeg"
       },
       {
         "id": 2,
@@ -36,7 +36,7 @@
             "correcta": false
           }
         ],
-        "imatge": "./img/avengers.jpeg"
+        "imatge": "./back/img/avengers.jpeg"
       },
       {
         "id": 3,
@@ -55,7 +55,7 @@
             "correcta": false
           }
         ],
-        "imatge": "./img/star-wars.jpg"
+        "imatge": "../img/star-wars.jpg"
       },
       {
         "id": 4,
