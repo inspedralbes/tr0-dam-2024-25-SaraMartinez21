@@ -19,6 +19,16 @@ const addNovaPregunta = async () => {
 const formulariCrear = () => {
   mostrarFormulario.value = !mostrarFormulario.value;
 };
+
+const eliminarPregunta = async (id) => {
+  await deletePregunta(id);
+  preguntas.value = await getPreguntas();
+};
+
+const editPregunts = async (id) => {
+  await editPregunta(id);
+  preguntas.value = await getPreguntas();
+};
 </script>
 
 <template>
@@ -48,6 +58,8 @@ const formulariCrear = () => {
             <li v-for="opcions in pregunta.opcions" :key="opcions.id" class="opcion-item">
               {{ opcions.resposta }}
             </li>
+            <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
+            <button @click="editPregunts(pregunta.id)" class="btn-editar">Editar</button>
           </ul>
         </li>
       </ul>

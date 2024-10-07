@@ -23,7 +23,7 @@ export async function addPregunta(pregunta) {
 }
 
 export async function deletePregunta(id) {
-    const response = await fetch(`http://localhost:3000/data/${id}`, {
+    const response = await fetch(`http://localhost:3000/data${id}`, {
         method: 'DELETE',
     });
     if (!response.ok) {
