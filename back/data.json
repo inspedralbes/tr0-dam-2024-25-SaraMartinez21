@@ -3,362 +3,134 @@
     {
       "id": 2,
       "pregunta": "¿Cómo se llama el villano principal en 'Avengers: Infinity War'?",
-      "opcions": [
-        {
-          "resposta": "Loki",
-          "correcta": false
-        },
-        {
-          "resposta": "Thanos",
-          "correcta": true
-        },
-        {
-          "resposta": "Ultron",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Loki","Thanos","Ultron"],
+      "resposta_correcta": 1,
       "imatge": "./back/img/avengers.jpeg"
     },
     {
       "id": 3,
       "pregunta": "¿Qué arma icónica utiliza Luke Skywalker en 'Star Wars'?",
-      "opcions": [
-        {
-          "resposta": "Sable láser",
-          "correcta": true
-        },
-        {
-          "resposta": "Bláster",
-          "correcta": false
-        },
-        {
-          "resposta": "Ballesta láser",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Sable láser","Bláster","Ballesta láser"],
+      "resposta_correcta": 0,
       "imatge": "../img/star-wars.jpg"
     },
     {
       "id": 4,
       "pregunta": "¿Qué superhéroe de DC tiene un anillo que le da poderes?",
-      "opcions": [
-        {
-          "resposta": "Batman",
-          "correcta": false
-        },
-        {
-          "resposta": "Green Lantern",
-          "correcta": true
-        },
-        {
-          "resposta": "Flash",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Batman","Green Lantern","Flash"],
+      "resposta_correcta": 1,
       "imatge": "./img/linterna-verde.jpeg"
     },
     {
       "id": 5,
       "pregunta": "¿Qué animal es Simba en la película de Disney 'El Rey León'?",
-      "opcions": [
-        {
-          "resposta": "Elefante",
-          "correcta": false
-        },
-        {
-          "resposta": "León",
-          "correcta": true
-        },
-        {
-          "resposta": "Tigre",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Elefante","León","Tigre"],
+      "resposta_correcta": 1,
       "imatge": "./img/reyleon.jpg"
     },
     {
       "id": 6,
       "pregunta": "¿Quién es el padre de Jon Snow en 'Juego de Tronos'?",
-      "opcions": [
-        {
-          "resposta": "Eddard Stark",
-          "correcta": false
-        },
-        {
-          "resposta": "Rhaegar Targaryen",
-          "correcta": true
-        },
-        {
-          "resposta": "Robert Baratheon",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Eddard Stark","Rhaegar Targaryen","Robert Baratheon"],
+      "resposta_correcta": 1,
       "imatge": "./img/juego-de-tronos.jpg"
     },
     {
       "id": 7,
       "pregunta": "¿Cómo se llama el dragón más grande en 'La Casa del Dragón'?",
-      "opcions": [
-        {
-          "resposta": "Vhagar",
-          "correcta": true
-        },
-        {
-          "resposta": "Caraxes",
-          "correcta": false
-        },
-        {
-          "resposta": "Drogon",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Vhagar","Caraxes","Drogon"],
+      "resposta_correcta": 0,
       "imatge": "./img/casadragon.jpeg"
     },
     {
       "id": 8,
       "pregunta": "¿En qué ciudad se celebra la despedida de soltero en 'Resacón en Las Vegas'?",
-      "opcions": [
-        {
-          "resposta": "Nueva York",
-          "correcta": false
-        },
-        {
-          "resposta": "Los Ángeles",
-          "correcta": false
-        },
-        {
-          "resposta": "Las Vegas",
-          "correcta": true
-        }
-      ],
+      "respostes": ["Nueva York","Los Ángeles","Las Vegas"],
+      "resposta_correcta": 2,
       "imatge": "./img/resacon2.jpg"
     },
     {
       "id": 9,
       "pregunta": "¿Qué héroe de Marvel tiene un martillo llamado Mjolnir?",
-      "opcions": [
-        {
-          "resposta": "Thor",
-          "correcta": true
-        },
-        {
-          "resposta": "Iron Man",
-          "correcta": false
-        },
-        {
-          "resposta": "Capitán América",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Thor","Iron Man","Capitán América"],
+      "resposta_correcta": 0,
       "imatge": "./img/thor.jpeg"
     },
     {
       "id": 10,
       "pregunta": "¿Qué personaje de 'Star Wars' es un maestro Jedi y entrenó a Luke Skywalker?",
-      "opcions": [
-        {
-          "resposta": "Yoda",
-          "correcta": true
-        },
-        {
-          "resposta": "Obi-Wan Kenobi",
-          "correcta": false
-        },
-        {
-          "resposta": "Mace Windu",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Yoda","Obi-Wan Kenobi","Mace Windu"],
+      "resposta_correcta": 0,
       "imatge": "./img/yoda.png"
     },
     {
       "id": 11,
       "pregunta": "¿Cuál es la ciudad natal de Batman en DC Comics?",
-      "opcions": [
-        {
-          "resposta": "Metrópolis",
-          "correcta": false
-        },
-        {
-          "resposta": "Gotham City",
-          "correcta": true
-        },
-        {
-          "resposta": "Central City",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Metrópolis","Gotham City","Central City"],
+      "resposta_correcta": 1,
       "imatge": "./img/ghotam.jpg"
     },
     {
       "id": 12,
       "pregunta": "¿Cómo se llama la princesa en la película 'Aladdin' de Disney?",
-      "opcions": [
-        {
-          "resposta": "Ariel",
-          "correcta": false
-        },
-        {
-          "resposta": "Bella",
-          "correcta": false
-        },
-        {
-          "resposta": "Jasmine",
-          "correcta": true
-        }
-      ],
+      "respostes": ["Ariel","Bella","Jasmine"],
+      "resposta_correcta": 2,
       "imatge": "./img/aladdin.jpg"
     },
     {
       "id": 13,
       "pregunta": "¿Qué es el 'Trono de Hierro' en 'Juego de Tronos'?",
-      "opcions": [
-        {
-          "resposta": "Una reliquia mágica",
-          "correcta": false
-        },
-        {
-          "resposta": "Un castillo",
-          "correcta": false
-        },
-        {
-          "resposta": "Un trono hecho de espadas",
-          "correcta": true
-        }
-      ],
+      "respostes": ["Una reliquia mágica","Un castillo","Un trono hecho de espadas"],
+      "resposta_correcta": 2,
       "imatge": "./img/juegodevater.jpg"
     },
     {
       "id": 14,
       "pregunta": "¿Quién es el hermano de Daemon Targaryen en 'La Casa del Dragón'?",
-      "opcions": [
-        {
-          "resposta": "Viserys I Targaryen",
-          "correcta": true
-        },
-        {
-          "resposta": "Jon Snow",
-          "correcta": false
-        },
-        {
-          "resposta": "Aegon II Targaryen",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Viserys I Targaryen","Jon Snow","Aegon II Targaryen"],
+      "resposta_correcta": 0,
       "imatge": "./img/casa-dragon.jpg"
     },
     {
       "id": 15,
       "pregunta": "¿Qué animal roba a uno de los protagonistas en 'Resacón en Las Vegas'?",
-      "opcions": [
-        {
-          "resposta": "Mono",
-          "correcta": false
-        },
-        {
-          "resposta": "León",
-          "correcta": true
-        },
-        {
-          "resposta": "Tigre",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Mono","León","Tigre"],
+      "resposta_correcta": 1,
       "imatge": "./img/resaconmeme.jpg"
     },
     {
       "id": 16,
       "pregunta": "¿Qué material está hecho el escudo de Capitán América?",
-      "opcions": [
-        {
-          "resposta": "Acero inoxidable",
-          "correcta": false
-        },
-        {
-          "resposta": "Vibranium",
-          "correcta": true
-        },
-        {
-          "resposta": "Aluminio",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Acero inoxidable","Vibranium","Aluminio"],
+      "resposta_correcta": 1,
       "imatge": "./img/capitan.jpg"
     },
     {
       "id": 17,
       "pregunta": "¿Cómo se llama el planeta natal de los Wookiees en 'Star Wars'?",
-      "opcions": [
-        {
-          "resposta": "Tatooine",
-          "correcta": false
-        },
-        {
-          "resposta": "Kashyyyk",
-          "correcta": true
-        },
-        {
-          "resposta": "Endor",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Tatooine","Kashyyyk","Endor"],
+      "resposta_correcta": 1,
       "imatge": "./img/kashyyyk.jpg"
     },
     {
       "id": 18,
       "pregunta": "¿Quién es la hermana de Darth Vader?",
-      "opcions": [
-        {
-          "resposta": "Leia Organa",
-          "correcta": true
-        },
-        {
-          "resposta": "Padmé Amidala",
-          "correcta": false
-        },
-        {
-          "resposta": "Ahsoka Tano",
-          "correcta": false
-        }
-      ],
+      "respostes": ["Leia Organa","Padmé Amidala","Ahsoka Tano"],
+      "resposta_correcta": 0,
       "imatge": "./img/leia.jpg"
     },
     {
       "id": 19,
       "pregunta": "¿Cómo se llama el robot astromecánico en 'Star Wars'?",
-      "opcions": [
-        {
-          "resposta": "R2-D2",
-          "correcta": true
-        },
-        {
-          "resposta": "C-3PO",
-          "correcta": false
-        },
-        {
-          "resposta": "BB-8",
-          "correcta": false
-        }
-      ],
+      "respostes": ["R2-D2","C-3PO","BB-8"],
+      "resposta_correcta": 0,
       "imatge": "./img/r2d2.jpg"
     },
     {
       "id": 20,
       "pregunta": "¿Qué color de sable de luz tiene Mace Windu?",
-      "opcions": [
-        {
-          "resposta": "Verde",
-          "correcta": false
-        },
-        {
-          "resposta": "Azul",
-          "correcta": false
-        },
-        {
-          "resposta": "Morado",
-          "correcta": true
-        }
-      ],
+      "respostes": ["Verde","Azul","Morado"],
+      "resposta_correcta": 2,
       "imatge": "./img/mace.jpg"
     }
   ]

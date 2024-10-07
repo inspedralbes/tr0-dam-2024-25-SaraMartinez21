@@ -52,30 +52,32 @@ app.delete('/deletePregunta/:id', (req, res) => {
     }
 })
 
-app.put('/editarPregunta/:id', (req, res)=>{
+app.put('/editarPregunta/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const index = json.preguntes.findIndex((pregunta) => pregunta.id === id);
 
-    if(index !== -1){
-        json.preguntes[index] = req.body;
-        fs.writeFile('data.json', JSON.stringify(json), (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            }else{
-                const {  pregunta, respuesta, imagen } = req.body;
-                if (!pregunta || !respuesta || !imagen || respuesta.length < 4 || correcta < 0 || correcta > 3) {
-                    res.send('Pregunta no valida');
-                }else{
-                    res.json(json.preguntes);
-                    console.log('Pregunta actualizada');
-                }
-            }
-        });
-        res.json(json.preguntes);
-    }
+    if (index !== -1) {
+        const { pregunta, respostes, imatge, resposta_correcta } = req.body;
 
-})
+        // Validar el cuerpo de la solicitud
+        if (!pregunta || !respostes || !imatge || respostes.length < 3 || resposta_correcta < 0 || resposta_correcta >= respostes.length) {
+            return res.status(400).send('Pregunta no válida');
+        }
+
+        json.preguntes[index] = { id, pregunta, respostes, imatge, resposta_correcta };
+
+        fs.writeFile('data.json', JSON.stringify(json, null, 2), (err) => {
+            if (err) {
+                console.error('Error al guardar la pregunta:', err);
+                return res.status(500).send('Error al guardar la pregunta');
+            }
+            res.json(json.preguntes); // Enviar la lista actualizada
+            console.log('Pregunta actualizada');
+        });
+    } else {
+        res.status(404).send('Pregunta no encontrada');
+    }
+});
 
 // app.get('/data', (req, res) => {
 //     const process = spawn( 'python', ['./data.json']);
