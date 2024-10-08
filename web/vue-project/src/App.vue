@@ -55,9 +55,9 @@ const editPregunts = async (id) => {
           <p class="pregunta-text">{{ pregunta.pregunta }}</p>
           <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
           <ul>
-            <li v-for="opcions in pregunta.opcions" :key="opcions.id" class="opcion-item">
-              {{ opcions.resposta }}
-            </li>
+            <li v-for="(resposta, index) in pregunta.respostes" :key="index" class="opcion-item">
+            {{ resposta }}
+          </li>
             <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
             <button @click="editPregunts(pregunta.id)" class="btn-editar">Editar</button>
           </ul>

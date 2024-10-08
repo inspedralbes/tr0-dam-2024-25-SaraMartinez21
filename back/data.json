@@ -5,14 +5,14 @@
       "pregunta": "¿Cómo se llama el villano principal en 'Avengers: Infinity War'?",
       "respostes": ["Loki","Thanos","Ultron"],
       "resposta_correcta": 1,
-      "imatge": "./back/img/avengers.jpeg"
+      "imatge": "https://th.bing.com/th/id/OIP.ZHtDnU4hR8mOinJTnc0W0wHaEK?rs=1&pid=ImgDetMain"
     },
     {
       "id": 3,
       "pregunta": "¿Qué arma icónica utiliza Luke Skywalker en 'Star Wars'?",
       "respostes": ["Sable láser","Bláster","Ballesta láser"],
       "resposta_correcta": 0,
-      "imatge": "../img/star-wars.jpg"
+      "imatge": "https://as01.epimg.net/meristation/imagenes/2021/05/05/betech/1620209195_059699_1620209343_sumario_normal.jpg"
     },
     {
       "id": 4,
