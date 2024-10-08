@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { getPreguntas, addPregunta } from './communicationManager.js';
+import { getPreguntas, addPregunta, deletePregunta, updatePregunta } from './communicationManager.js';
 
 const preguntas = ref([]);
 const novaPregunta = ref({ pregunta: '', opcions: [], imatge: '' });
@@ -11,10 +11,16 @@ onMounted(async () => {
 });
 
 const addNovaPregunta = async () => {
-  await addPregunta(novaPregunta.value);
+  const nuevaPregunta = {
+    pregunta: novaPregunta.value.pregunta,
+    resposta: novaPregunta.value.resposta.split(',').map((opcio) => opcio.trim()),
+    imatge: novaPregunta.value.imatge,
+    resposta_correcta: 0
+  };
+  await addPregunta(nuevaPregunta);
   preguntas.value = await getPreguntas();
   novaPregunta.value = { pregunta: '', opcions: [], imatge: '' };
-};
+  }
 
 const formulariCrear = () => {
   mostrarFormulario.value = !mostrarFormulario.value;
@@ -25,7 +31,7 @@ const eliminarPregunta = async (id) => {
   preguntas.value = await getPreguntas();
 };
 
-const editPregunts = async (id) => {
+const updatePregunts = async (id) => {
   await editPregunta(id);
   preguntas.value = await getPreguntas();
 };
@@ -45,8 +51,9 @@ const editPregunts = async (id) => {
       <!-- Formulario para crear preguntas -->
       <form v-if="mostrarFormulario" @submit.prevent="addNovaPregunta" class="form-crear">
         <input v-model="novaPregunta.pregunta" placeholder="Pregunta" class="input" />
-        <input v-model="novaPregunta.opcions" placeholder="Opcions (separadas por comas)" class="input" />
+        <input v-model="novaPregunta.resposta" placeholder="Opcions (separadas por comas)" class="input" />
         <input v-model="novaPregunta.imatge" placeholder="Imatge (URL)" class="input" />
+        <input v-model="novaPregunta.resposta_correcta" placeholder="Resposta correcta" class="input" />
         <button type="submit" class="btn-submit">Crear</button>
       </form>
 
@@ -55,11 +62,16 @@ const editPregunts = async (id) => {
           <p class="pregunta-text">{{ pregunta.pregunta }}</p>
           <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
           <ul>
-            <li v-for="(resposta, index) in pregunta.respostes" :key="index" class="opcion-item">
+            <li
+            v-for="(resposta, index) in pregunta.respostes"
+            :key="index"
+            :class="{ 'respuesta_correcta': index === pregunta.resposta_correcta }"
+            class="opcion-item"
+          >
             {{ resposta }}
           </li>
             <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
-            <button @click="editPregunts(pregunta.id)" class="btn-editar">Editar</button>
+            <button @click="updatePregunts(pregunta.id)" class="btn-editar">Editar</button>
           </ul>
         </li>
       </ul>
@@ -198,6 +210,11 @@ header {
   color: #7f8c8d;
 }
 
+.respuesta_correcta {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
 /* Responsivo */
 @media (max-width: 600px) {
   .btn-crear, .btn-submit {
@@ -211,6 +228,7 @@ header {
   .form-crear {
     padding: 15px;
   }
+
 }
 </style>
 
