@@ -3,8 +3,9 @@ import { ref, onMounted } from 'vue';
 import { getPreguntas, addPregunta, deletePregunta, updatePregunta } from './communicationManager.js';
 
 const preguntas = ref([]);
-const novaPregunta = ref({ pregunta: '', opcions: [], imatge: '' });
+const novaPregunta = ref({ pregunta: '', opcions: [], imatge: '', resposta_correcta: 0 });
 const mostrarFormulario = ref(false);
+const formulariEditar = ref(null);
 
 onMounted(async () => {
   preguntas.value = await getPreguntas();
@@ -15,12 +16,12 @@ const addNovaPregunta = async () => {
     pregunta: novaPregunta.value.pregunta,
     resposta: novaPregunta.value.resposta.split(',').map((opcio) => opcio.trim()),
     imatge: novaPregunta.value.imatge,
-    resposta_correcta: 0
+    resposta_correcta: novaPregunta.value.resposta_correcta,
   };
   await addPregunta(nuevaPregunta);
   preguntas.value = await getPreguntas();
-  novaPregunta.value = { pregunta: '', opcions: [], imatge: '' };
-  }
+  novaPregunta.value = { pregunta: '', opcions: [], imatge: '', resposta_correcta: 0 };
+};
 
 const formulariCrear = () => {
   mostrarFormulario.value = !mostrarFormulario.value;
@@ -31,15 +32,29 @@ const eliminarPregunta = async (id) => {
   preguntas.value = await getPreguntas();
 };
 
-const updatePregunts = async (id) => {
-  await editPregunta(id);
-  preguntas.value = await getPreguntas();
+const habilitarFormulariEditar = (pregunta) => {
+  formulariEditar.value = { ...pregunta };
 };
+
+const guardarPreguntaEditada = async () => {
+  await updatePregunta( id, {
+    pregunta: preguntaEditada.value.pregunta,
+    resposta: preguntaEditada.value.resposta.split(',').map((opcio) => opcio.trim()),
+    imatge: preguntaEditada.value.imatge,
+    resposta_correcta: preguntaEditada.value.resposta_correcta,
+  });
+
+  preguntas.value = await getPreguntas();
+  formulariEditar.value = null;
+};
+  const cancelarEdicion = () => {
+    formulariEditar.value = null;
+  };
+
 </script>
 
 <template>
   <div class="container">
-
 
     <section class="preguntas-section">
 
@@ -59,101 +74,110 @@ const updatePregunts = async (id) => {
 
       <ul class="lista-preguntas">
         <li v-for="pregunta in preguntas" :key="pregunta.id" class="pregunta-item">
-          <p class="pregunta-text">{{ pregunta.pregunta }}</p>
-          <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
-          <ul>
-            <li
-            v-for="(resposta, index) in pregunta.respostes"
-            :key="index"
-            :class="{ 'respuesta_correcta': index === pregunta.resposta_correcta }"
-            class="opcion-item"
-          >
-            {{ resposta }}
-          </li>
-            <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
-            <button @click="updatePregunts(pregunta.id)" class="btn-editar">Editar</button>
-          </ul>
+
+          <div v-if="formulariEditar && formulariEditar.id === pregunta.id">
+            <input v-model="formulariEditar.pregunta" placeholder="Pregunta" class="input" />
+            <input v-model="formulariEditar.resposta" placeholder="Opcions (separadas por comas)" class="input" />
+            <input v-model="formulariEditar.imatge" placeholder="Imatge (URL)" class="input" />
+            <input v-model="formulariEditar.resposta_correcta" placeholder="Resposta correcta" class="input" />
+            <button @click="guardarPreguntaEditada" class="btn-submit">Guardar</button>
+            <button @click="cancelarEdicion" class="btn-eliminar">Cancelar</button>
+          </div>
+
+          <div v-else>
+            <p class="pregunta-text">{{ pregunta.pregunta }}</p>
+            <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
+            <ul>
+              <li
+                v-for="(resposta, index) in pregunta.respostes"
+                :key="index"
+                :class="{ 'respuesta_correcta': index === pregunta.resposta_correcta }"
+                class="opcion-item"
+              >
+                {{ resposta }}
+              </li>
+              <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
+              <button @click="habilitarFormulariEditar(pregunta)" class="btn-editar">Editar</button>
+            </ul>
+          </div>
+
+          <div v-else>
+            <p class="pregunta-text">{{ pregunta.pregunta }}</p>ç
+            <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
+            <ul>
+              <li
+                v-for="(resposta, index) in pregunta.respostes"
+                :key="index"
+                :class="{ 'respuesta_correcta': index === pregunta.resposta_correcta }"
+                class="opcion-item"
+              >
+                {{ resposta }}
+              </li>
+              <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
+              <button @click="habilitarFormulariEditar(pregunta)" class="btn-editar">Editar</button>
+            </ul>
+          </div>
         </li>
       </ul>
     </section>
   </div>
 </template>
 
-
-
 <style scoped>
-/* Estilos generales */
+
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f0f4f8;
-  color: #2c3e50;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header */
-header {
-  background-color: #34495e;
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 4px solid #2c3e50;
-}
-
-.logo {
-  font-size: 26px;
-  color: #ecf0f1;
-  margin: 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
 /* Botón para crear preguntas */
 .btn-crear {
-  background-color: #e74c3c;
+  background-color: #3498db;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 20px 20vw;
   font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  display: block;
-  margin: 20px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease, background-color 0.3s ease;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  
 }
 
 .btn-crear:hover {
-  background-color: #c0392b;
+  background-color: #2980b9;
   transform: translateY(-3px);
 }
 
 /* Formulario */
 .form-crear {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 6.5%;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  transition: box-shadow 0.3s ease;
-}
-
-.form-crear:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3vh;
 }
 
 .input {
   width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 2%;
   border-radius: 8px;
-  border: 1px solid #dcdde1;
+  border: 1px solid #ccc;
   font-size: 16px;
-  background-color: #f9f9f9;
+  background-color: #fafafa;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -171,11 +195,8 @@ header {
   border-radius: 30px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-  background-color: #27ae60;
-  transform: translateY(-3px);
+  display: block;
+  margin: 0 auto;
 }
 
 /* Lista de preguntas */
@@ -189,19 +210,19 @@ header {
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .pregunta-item:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .pregunta-text {
   font-weight: bold;
   margin-bottom: 8px;
   font-size: 18px;
-  color: #2980b9;
+  color: #3498db;
 }
 
 .opcion-item {
@@ -213,6 +234,32 @@ header {
 .respuesta_correcta {
   color: #2ecc71;
   font-weight: bold;
+}
+
+.btn-eliminar,
+.btn-editar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-editar {
+  background-color: #f39c12;
+  margin-left: 10px;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+.btn-editar:hover {
+  background-color: #d35400;
 }
 
 /* Responsivo */
@@ -229,6 +276,10 @@ header {
     padding: 15px;
   }
 
+  .btn-eliminar,
+  .btn-editar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 </style>
-
