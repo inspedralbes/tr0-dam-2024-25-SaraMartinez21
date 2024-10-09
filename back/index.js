@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs'); 
 const app = express();
 const cors = require('cors');
-const { parse } = require('path');
+
 const port = 3000;
 
 app.use(express.json());
@@ -20,19 +20,21 @@ app.get('/data', (req, res) => {
     res.json(json.preguntes);
 });
 
-app.get('/data/:id', (req, res) => {
-    res.json(json.preguntes[req.params.id]);
-});
+app.post('/addPreguntas', (req, res) => {
+    
+    const lastId = json.preguntes.length > 0 ? json.preguntes[json.preguntes.length - 1].id : 0;
+    const newPregunta = { id: lastId + 1, ...req.body };
 
-app.post('/data', (req, res) => {
-    json.preguntes.push(req.body);
+    json.preguntes.push(newPregunta);
+
     fs.writeFile('data.json', JSON.stringify(json), (err) => {
         if (err) {
             console.error(err);
             return;
         }
     });
-    res.json(json.preguntes);
+
+    res.json(newPregunta);
 });
 
 app.delete('/deletePregunta/:id', (req, res) => {
