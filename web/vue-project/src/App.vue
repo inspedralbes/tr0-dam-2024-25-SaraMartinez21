@@ -87,7 +87,8 @@ const guardarPreguntaEditada = async () => {
           <div v-else>
             <p class="pregunta-text">{{ pregunta.pregunta }}</p>
             <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
-            <ul>
+            <div class="container-respostas">
+              <ul>
               <li
                 v-for="(resposta, index) in pregunta.respostes"
                 :key="index"
@@ -96,26 +97,12 @@ const guardarPreguntaEditada = async () => {
               >
                 {{ resposta }}
               </li>
-              <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
-              <button @click="habilitarFormulariEditar(pregunta)" class="btn-editar">Editar</button>
+              <div class="container-buttons">
+                <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
+                <button @click="habilitarFormulariEditar(pregunta)" class="btn-editar">Editar</button>
+              </div>
             </ul>
-          </div>
-
-          <div v-else>
-            <p class="pregunta-text">{{ pregunta.pregunta }}</p>ç
-            <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imatge de la pregunta" />
-            <ul>
-              <li
-                v-for="(resposta, index) in pregunta.respostes"
-                :key="index"
-                :class="{ 'respuesta_correcta': index === pregunta.resposta_correcta }"
-                class="opcion-item"
-              >
-                {{ resposta }}
-              </li>
-              <button @click="eliminarPregunta(pregunta.id)" class="btn-eliminar">Eliminar</button>
-              <button @click="habilitarFormulariEditar(pregunta)" class="btn-editar">Editar</button>
-            </ul>
+            </div>
           </div>
         </li>
       </ul>
@@ -155,6 +142,24 @@ body {
   box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
   
 }
+
+img {
+  width: 100%;
+  max-width: 300%; 
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 5%;
+}
+
+.container-respostas {
+  margin-top: 5%;
+}
+
+.container-buttons {
+  margin-top: 2%;
+}
+
 
 .btn-crear:hover {
   background-color: #2980b9;
@@ -221,14 +226,15 @@ body {
 .pregunta-text {
   font-weight: bold;
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: 250%;
   color: #3498db;
 }
 
 .opcion-item {
   margin-left: 20px;
-  font-size: 15px;
+  font-size: 150%;
   color: #7f8c8d;
+  margin-bottom: 5px;
 }
 
 .respuesta_correcta {

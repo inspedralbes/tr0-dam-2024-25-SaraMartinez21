@@ -19,119 +19,119 @@
       "pregunta": "¿Qué superhéroe de DC tiene un anillo que le da poderes?",
       "respostes": ["Batman","Green Lantern","Flash"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rtve.es%2Ftelevision%2F20221016%2Fbatman-actores-cine-saber-ganar%2F2333755.shtml&psig=AOvVaw0a0hRmjNku40GbQZBUd6Ox&ust=1728484877434000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjnho2C_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2014/11/409708-cine-superheroes-critica-linterna-verde.jpg?tf=1200x"
     },
     {
       "id": 5,
       "pregunta": "¿Qué animal es Simba en la película de Disney 'El Rey León'?",
       "respostes": ["Elefante","León","Tigre"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eldiario.es%2Fcultura%2Fcine%2Fnotas-famosas-rey-leon-robadas-disney_1_2729830.html&psig=AOvVaw3fc1gnq4Fxjoy90COt6CHZ&ust=1728484915899000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjkt56C_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://www.clarin.com/img/2016/09/29/SJVrT2htEg_1256x620.jpg"
     },
     {
       "id": 6,
       "pregunta": "¿Quién es el padre de Jon Snow en 'Juego de Tronos'?",
       "respostes": ["Eddard Stark","Rhaegar Targaryen","Robert Baratheon"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.revistagq.com%2Fnoticias%2Farticulo%2Fkit-harington-jon-snow-situacion-serie&psig=AOvVaw1AdCmJrD7ElzOld_HlUGsR&ust=1728484979610000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDPoLyC_4gDFQAAAAAdAAAAABAJ"
+      "imatge": "https://s36496.pcdn.co/wp-content/uploads/2019/04/4_GOT_Post.jpg"
     },
     {
       "id": 7,
       "pregunta": "¿Cómo se llama el dragón más grande en 'La Casa del Dragón'?",
       "respostes": ["Vhagar","Caraxes","Drogon"],
       "resposta_correcta": 0,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.espinof.com%2Fcriticas%2Fcasa-dragon-monumental-regreso-a-poniente-notable-precuela-juego-tronos-hbo-max-aspira-a-ser-proximo-fenomeno-fantasia&psig=AOvVaw01YDPH6A__0EYslLrVdFJ5&ust=1728485027232000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOit0dOC_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://img.asmedia.epimg.net/resizer/v2/B5B6AWWHPFF3XPIIWZF6UCLJRE.jpg?auth=d38a5d04386cd091d66a9d2a9698427abc1582a316a794beef314f36df93b300&width=644&height=362&smart=true"
     },
     {
       "id": 8,
       "pregunta": "¿En qué ciudad se celebra la despedida de soltero en 'Resacón en Las Vegas'?",
       "respostes": ["Nueva York","Los Ángeles","Las Vegas"],
       "resposta_correcta": 2,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rakuten.tv%2Fes%2Fmovies%2Fresacon-en-las-vegas&psig=AOvVaw1_JiH2BQP1qaK43cgX77mJ&ust=1728485069955000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjAyOeC_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://www.ecartelera.com/carteles/fondos/3100/3154-n2.webp"
     },
     {
       "id": 9,
       "pregunta": "¿Qué héroe de Marvel tiene un martillo llamado Mjolnir?",
       "respostes": ["Thor","Iron Man","Capitán América"],
       "resposta_correcta": 0,
-      "imatge": "./img/thor.jpeg"
+      "imatge": "https://img2.rtve.es/i/?w=1600&i=1585840423850.jpg"
     },
     {
       "id": 10,
       "pregunta": "¿Qué personaje de 'Star Wars' es un maestro Jedi y entrenó a Luke Skywalker?",
       "respostes": ["Yoda","Obi-Wan Kenobi","Mace Windu"],
       "resposta_correcta": 0,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rtve.es%2Ftelevision%2F20220216%2Fsaber-ganar-thor-marvel%2F2247960.shtml&psig=AOvVaw1aSRrxvOTbQSJ68FQ_FhiB&ust=1728485099910000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODMp_WC_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/12/star-wars-scaled.jpg?resize=1200%2C675&quality=70&strip=all&ssl=1"
     },
     {
       "id": 11,
       "pregunta": "¿Cuál es la ciudad natal de Batman en DC Comics?",
       "respostes": ["Metrópolis","Gotham City","Central City"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fkids.jotdown.es%2F2023%2F02%2F24%2Fgotham%2F&psig=AOvVaw11cRf39VkBgOMWAlQ6AYV4&ust=1728485141134000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCp34mD_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://kids.jotdown.es/wp-content/uploads/2023/02/batman-the-long-halloween-part-one_b7Oer7-gigapixel-art-scale-2_00x-1-2048x1152.jpg"
     },
     {
       "id": 12,
       "pregunta": "¿Cómo se llama la princesa en la película 'Aladdin' de Disney?",
       "respostes": ["Ariel","Bella","Jasmine"],
       "resposta_correcta": 2,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.disneyplus.com%2Fes-es%2Fmovies%2Faladdin%2F2SngByljXESE&psig=AOvVaw2e6--oA6oCABKdmABEsnDt&ust=1728485177878000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKD5u5qD_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://media.vogue.es/photos/5cc739881a1e58370ab83f2a/master/w_1600,c_limit/living__619659514.jpg"
     },
     {
       "id": 13,
       "pregunta": "¿Qué es el 'Trono de Hierro' en 'Juego de Tronos'?",
       "respostes": ["Una reliquia mágica","Un castillo","Un trono hecho de espadas"],
       "resposta_correcta": 2,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.chicageek.com%2Fverdadero-trono-hierro-lavabo-bar-2385441%2F&psig=AOvVaw0knh9ZarlUd_42vl9ZvzTb&ust=1728485216063000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPC78qyD_4gDFQAAAAAdAAAAABAQ"
+      "imatge": "https://www.chicageek.com/wp-content/uploads/2015/04/5530c11458ad3s162468.jpg"
     },
     {
       "id": 14,
       "pregunta": "¿Quién es el hermano de Daemon Targaryen en 'La Casa del Dragón'?",
       "respostes": ["Viserys I Targaryen","Jon Snow","Aegon II Targaryen"],
       "resposta_correcta": 0,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marca.com%2Ftiramillas%2Fseries%2F2024%2F06%2F17%2F666ff939268e3e60758b457f.html&psig=AOvVaw3A6YxNyfbB5cYVlUAyibvn&ust=1728485256814000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNi-iMKD_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://www.publico.es/uploads/2024/06/14/666c77f83e928.jpeg"
     },
     {
       "id": 15,
       "pregunta": "¿Qué animal roba a uno de los protagonistas en 'Resacón en Las Vegas'?",
       "respostes": ["Mono","León","Tigre"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.larazon.es%2Flas-vegas-ya-no-tiene-gracia-YH2494247%2F&psig=AOvVaw2E9AvcY888ADFdC71RpYdZ&ust=1728485299021000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKju39mD_4gDFQAAAAAdAAAAABAQ"
+      "imatge": "https://i.pinimg.com/564x/0b/08/78/0b08786bf479fb350e6caaf84752ee82.jpg"
     },
     {
       "id": 16,
       "pregunta": "¿Qué material está hecho el escudo de Capitán América?",
       "respostes": ["Acero inoxidable","Vibranium","Aluminio"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fxoandelugo.org%2Fcapitan-america-superheroe-libertario-ignacio-almara%2F&psig=AOvVaw3q6YJpoC3_HNIhnxFTGYHU&ust=1728485351950000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjhhe6D_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://media.revistagq.com/photos/5ca5fa04d71dd992f79581bc/16:9/w_1920,c_limit/chris_evans_capitan_america_4514.jpg"
     },
     {
       "id": 17,
       "pregunta": "¿Cómo se llama el planeta natal de los Wookiees en 'Star Wars'?",
       "respostes": ["Tatooine","Kashyyyk","Endor"],
       "resposta_correcta": 1,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffrikipolis.com%2Ftemplo-jedi%2Fkashyyyk-y-el-bosque-de-wroshyr%2F&psig=AOvVaw3JAgi96yMI8WYn-X03a8lP&ust=1728485398335000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDfn4SE_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://frikipolis.com/wp-content/uploads/2022/01/databank_kasyyyk_01_169_aa13a490.jpeg"
     },
     {
       "id": 18,
       "pregunta": "¿Quién es la hermana de Darth Vader?",
       "respostes": ["Leia Organa","Padmé Amidala","Ahsoka Tano"],
       "resposta_correcta": 0,
-      "imatge": "./img/leia.jpg"
+      "imatge": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/03/star-wars-episodio-iv-nueva-esperanza-1977-princesa-leia-organa-carrie-fisher-luke-skywalker-mark-hamill-3284413.jpg?tf=1200x"
     },
     {
       "id": 19,
       "pregunta": "¿Cómo se llama el robot astromecánico en 'Star Wars'?",
       "respostes": ["R2-D2","C-3PO","BB-8"],
       "resposta_correcta": 0,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lavanguardia.com%2Fvida%2Fjunior-report%2F20171212%2F433495438792%2Fprincesa-leia-rebelde.html&psig=AOvVaw0tI66M_fBFAuBQIS26Abrz&ust=1728485429769000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLCa15OE_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/08/r2-d2.jpg?tf=1200x"
     },
     {
       "id": 20,
       "pregunta": "¿Qué color de sable de luz tiene Mace Windu?",
       "respostes": ["Verde","Azul","Morado"],
       "resposta_correcta": 2,
-      "imatge": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fas.com%2Fmeristation%2F2017%2F10%2F10%2Fbetech%2F1507631983_511333.html&psig=AOvVaw1L7n9fhNIOOGDV4vE4JsjN&ust=1728485477815000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiJj6yE_4gDFQAAAAAdAAAAABAE"
+      "imatge": "https://phantom-elmundo.unidadeditorial.es/d1e3aaaa2fa0e71d20498244a4cd01a4/resize/473/f/webp/assets/multimedia/imagenes/2021/04/13/16183318288183.jpg"
     }
   ]
 }
