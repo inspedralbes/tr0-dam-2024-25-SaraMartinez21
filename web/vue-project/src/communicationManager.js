@@ -1,5 +1,7 @@
+//let ruta = 'http://tr0.quiz.sarmarbau.dam.inspedralbes.cat:23369';
+let ruta = 'http://localhost:3000';
 export async function getPreguntas() {
-    const response = await fetch('http://localhost:3000/data');
+    const response = await fetch(`${ruta}/data`);
     if (!response.ok) {
         throw new Error('Error al obtener las preguntas');
     }   
@@ -8,7 +10,7 @@ export async function getPreguntas() {
 }
 
 export async function addPregunta(pregunta) {
-    const response = await fetch('http://localhost:3000/data', {
+    const response = await fetch(`${ruta}/addPregunta`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -23,7 +25,7 @@ export async function addPregunta(pregunta) {
 }
 
 export async function deletePregunta(id) {
-    const response = await fetch(`http://localhost:3000/data${id}`, {
+    const response = await fetch(`${ruta}/deletePregunta/${id}`, {
         method: 'DELETE',
     });
     if (!response.ok) {
@@ -32,13 +34,12 @@ export async function deletePregunta(id) {
 }
 
 export async function updatePregunta(id, pregunta) {
-
-    const response = await fetch(`http://localhost:3000/data/${id}`, {
+    const response = await fetch(`${ruta}/updatePregunta/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(pregunta),
+        body: JSON.stringify(pregunta), // Enviar la pregunta editada en el cuerpo
     });
     if (!response.ok) {
         throw new Error('Error al actualizar la pregunta');

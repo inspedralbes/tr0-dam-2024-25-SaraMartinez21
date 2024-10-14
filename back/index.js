@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors');
 const { v4: uuidv4, validate } = require('uuid');
 //const { uuid } = require('uuidv4');
-const port = 3000;
+const port = 23369;
 
 app.use(express.json());
 app.use(cors());
@@ -23,11 +23,6 @@ app.get('/data', (req, res) => {
     res.json(json.preguntes);
 });
 
-function generateUid(){
-    if (uuid == undefined || !validate(uuid)) {
-        uid= uuidv4();
-    }
-}
 
 app.post('/addPreguntas', (req, res) => {
     const lastId = json.preguntes.length > 0 ? json.preguntes[json.preguntes.length - 1].id : 0;

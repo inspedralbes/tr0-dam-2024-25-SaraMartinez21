@@ -37,16 +37,21 @@ const habilitarFormulariEditar = (pregunta) => {
 };
 
 const guardarPreguntaEditada = async () => {
-  await updatePregunta( id, {
-    pregunta: preguntaEditada.value.pregunta,
-    resposta: preguntaEditada.value.resposta.split(',').map((opcio) => opcio.trim()),
-    imatge: preguntaEditada.value.imatge,
-    resposta_correcta: preguntaEditada.value.resposta_correcta,
-  });
+  const editadaPregunta = {
+    id: formulariEditar.value.id, // Incluir el id
+    pregunta: formulariEditar.value.pregunta,
+    respostes: formulariEditar.value.resposta.split(',').map((opcio) => opcio.trim()), // Cambio de "resposta" a "respostes"
+    imatge: formulariEditar.value.imatge,
+    resposta_correcta: formulariEditar.value.resposta_correcta,
+  };
+
+  // Pasar el id en la solicitud PUT
+  await updatePregunta(editadaPregunta.id, editadaPregunta);
 
   preguntas.value = await getPreguntas();
   formulariEditar.value = null;
 };
+
   const cancelarEdicion = () => {
     formulariEditar.value = null;
   };
