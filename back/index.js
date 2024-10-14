@@ -63,18 +63,15 @@ app.post('/preguntesPartida', (req, res) => {
 app.post('/submitRespuestas', (req, res) => {
     const { token, respuestas } = req.body;
 
-    // Validación de los datos recibidos
-    if (!token || !Array.isArray(respuestas)) {
-        return res.status(400).send('Faltan datos o datos incorrectos');
-    }
 
-    // Buscar la partida correspondiente al token
+
     const partida = partidas[token];
-    if (!partida) {
-        return res.status(404).send('Token no válido');
+   
+    if(!partida.intentos){
+        partida.intentos = 0;
     }
+    partida.intentos++;
 
-    // Procesar las respuestas
     let correctas = 0;
     for (let i = 0; i < respuestas.length; i++) {
         const pregunta = partida.preguntes[i];
@@ -83,8 +80,7 @@ app.post('/submitRespuestas', (req, res) => {
         }
     }
 
-    // Enviar el resultado al cliente
-    res.status(200).json({ correctas });
+    res.status(200).json({ correctas, intentos: partida.intentos });
 });
 
 
@@ -122,9 +118,7 @@ app.put('/updatePregunta/:id', (req, res) => {
     }
 });
 
-// app.get('/data', (req, res) => {
-//     const process = spawn( 'python', ['./data.json']);
-// });
+
 
 
 app.listen(port, () => {

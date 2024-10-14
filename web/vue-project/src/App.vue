@@ -44,8 +44,6 @@ const guardarPreguntaEditada = async () => {
     imatge: formulariEditar.value.imatge,
     resposta_correcta: formulariEditar.value.resposta_correcta,
   };
-
-  // Pasar el id en la solicitud PUT
   await updatePregunta(editadaPregunta.id, editadaPregunta);
 
   preguntas.value = await getPreguntas();
