@@ -1,0 +1,369 @@
+{
+    "dadesTotals": {
+        "preguntesIntentades": 20,
+        "preguntesCorrectes": 12
+    },
+    "dadesPerPregunta": [
+        {
+            "id": 2,
+            "intents": 2,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Loki",
+                    "escollida": 0
+                },
+                {
+                    "text": "Thanos",
+                    "escollida": 1
+                },
+                {
+                    "text": "Ultron",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Sable láser",
+                    "escollida": 1
+                },
+                {
+                    "text": "Bláster",
+                    "escollida": 0
+                },
+                {
+                    "text": "Ballesta láser",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "intents": 3,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Batman",
+                    "escollida": 1
+                },
+                {
+                    "text": "Green Lantern",
+                    "escollida": 1
+                },
+                {
+                    "text": "Flash",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "intents": 2,
+            "correctes": 0,
+            "respostes": [
+                {
+                    "text": "Elefante",
+                    "escollida": 1
+                },
+                {
+                    "text": "León",
+                    "escollida": 0
+                },
+                {
+                    "text": "Tigre",
+                    "escollida": 1
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Eddard Stark",
+                    "escollida": 0
+                },
+                {
+                    "text": "Rhaegar Targaryen",
+                    "escollida": 1
+                },
+                {
+                    "text": "Robert Baratheon",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "intents": 3,
+            "correctes": 0,
+            "respostes": [
+                {
+                    "text": "Vhagar",
+                    "escollida": 1
+                },
+                {
+                    "text": "Caraxes",
+                    "escollida": 0
+                },
+                {
+                    "text": "Drogon",
+                    "escollida": 2
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "intents": 2,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Nueva York",
+                    "escollida": 0
+                },
+                {
+                    "text": "Los Ángeles",
+                    "escollida": 0
+                },
+                {
+                    "text": "Las Vegas",
+                    "escollida": 1
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Thor",
+                    "escollida": 1
+                },
+                {
+                    "text": "Iron Man",
+                    "escollida": 0
+                },
+                {
+                    "text": "Capitán América",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Yoda",
+                    "escollida": 1
+                },
+                {
+                    "text": "Obi-Wan Kenobi",
+                    "escollida": 0
+                },
+                {
+                    "text": "Mace Windu",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "intents": 2,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Metrópolis",
+                    "escollida": 0
+                },
+                {
+                    "text": "Gotham City",
+                    "escollida": 1
+                },
+                {
+                    "text": "Central City",
+                    "escollida": 1
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Ariel",
+                    "escollida": 1
+                },
+                {
+                    "text": "Bella",
+                    "escollida": 0
+                },
+                {
+                    "text": "Jasmine",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Una reliquia mágica",
+                    "escollida": 0
+                },
+                {
+                    "text": "Un castillo",
+                    "escollida": 1
+                },
+                {
+                    "text": "Un trono hecho de espadas",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "intents": 2,
+            "correctes": 0,
+            "respostes": [
+                {
+                    "text": "Viserys I Targaryen",
+                    "escollida": 1
+                },
+                {
+                    "text": "Jon Snow",
+                    "escollida": 1
+                },
+                {
+                    "text": "Aegon II Targaryen",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Mono",
+                    "escollida": 0
+                },
+                {
+                    "text": "León",
+                    "escollida": 1
+                },
+                {
+                    "text": "Tigre",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Acero inoxidable",
+                    "escollida": 0
+                },
+                {
+                    "text": "Vibranium",
+                    "escollida": 1
+                },
+                {
+                    "text": "Aluminio",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Tatooine",
+                    "escollida": 1
+                },
+                {
+                    "text": "Kashyyyk",
+                    "escollida": 0
+                },
+                {
+                    "text": "Endor",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "intents": 2,
+            "correctes": 0,
+            "respostes": [
+                {
+                    "text": "Leia Organa",
+                    "escollida": 1
+                },
+                {
+                    "text": "Padmé Amidala",
+                    "escollida": 0
+                },
+                {
+                    "text": "Ahsoka Tano",
+                    "escollida": 1
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "intents": 1,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "R2-D2",
+                    "escollida": 1
+                },
+                {
+                    "text": "C-3PO",
+                    "escollida": 0
+                },
+                {
+                    "text": "BB-8",
+                    "escollida": 0
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "intents": 2,
+            "correctes": 1,
+            "respostes": [
+                {
+                    "text": "Verde",
+                    "escollida": 1
+                },
+                {
+                    "text": "Azul",
+                    "escollida": 1
+                },
+                {
+                    "text": "Morado",
+                    "escollida": 0
+                }
+            ]
+        }
+    ]
+}

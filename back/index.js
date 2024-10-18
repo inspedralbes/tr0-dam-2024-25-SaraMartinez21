@@ -4,7 +4,8 @@ const app = express();
 const cors = require('cors');
 const { v4: uuidv4, validate } = require('uuid');
 //const { uuid } = require('uuidv4');
-const port = 23369;
+//const port = 23369;
+const port = 3000;
 
 app.use(express.json());
 app.use(cors());
